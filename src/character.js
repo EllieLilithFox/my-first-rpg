@@ -24,10 +24,10 @@ export class Character {
 }
 
 export class Monster {
-  constructor(name, hp, atk) {
+  constructor(name, hp, xpAwarded, atk) {
     this.name = name;
     this.hp = hp;
-    this.xpAwarded = "";
+    this.xpAwarded = xpAwarded;
     this.atk = atk;
   }
 

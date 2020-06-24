@@ -6,7 +6,7 @@ describe("Character", () => {
   let reusableMonster;
   beforeEach(() => {
     reusableCharacter = new Character("The Dude", 10);
-    reusableMonster = new Monster("Goblin", 4, 4)
+    reusableMonster = new Monster("Goblin", 4, 2, 4)
   });
 
 
