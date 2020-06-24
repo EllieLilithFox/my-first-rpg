@@ -2,6 +2,7 @@ export class Character {
   constructor(name, hp) {
     this.name = name;
     this.hp = hp;
+    this.xp = "";
     this.attributes = {
       str: 10,
       dex: 10,
@@ -34,6 +35,7 @@ export class Monster {
   }
 
   attackCharacter(character) {
-    return character.hp - this.attackRoll();
+    character.hp = character.hp - this.attackRoll();
+    return character.hp;
   }
 }
