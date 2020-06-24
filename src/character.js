@@ -25,7 +25,6 @@ export class Monster {
   }
 
   attackRoll() {
-    let attack = 0;
-    return attack;    
+    return this.atk;
   }
 }
