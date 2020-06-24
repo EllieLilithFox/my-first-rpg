@@ -6,7 +6,7 @@ describe("Character", () => {
   let reusableMonster;
   beforeEach(() => {
     reusableCharacter = new Character("The Dude", 10);
-    reusableMonster = new Monster("Goblin", 4)
+    reusableMonster = new Monster("Goblin", 4, 4)
   });
 
 
@@ -20,9 +20,14 @@ describe("Character", () => {
   test("Should correctly create a monster object with name, hp, and attack strength", () => {
     expect(reusableMonster.name).toBe("Goblin");
     expect(reusableMonster.hp).toBe(4);
+    expect(reusableMonster.atk).toBe(4);
   });
 
   test("Should correctly run a method to calculate an attack roll by the character object", () => {
     expect(reusableCharacter.attackRoll()).toEqual(5);
+  });
+
+  test("Should correctly run a method to calculate an attack roll by the monster object", () => {
+    expect(reusableMonster.attackRoll()).toEqual(4);
   });
 });

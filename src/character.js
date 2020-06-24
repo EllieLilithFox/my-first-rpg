@@ -18,8 +18,14 @@ export class Character {
 }
 
 export class Monster {
-  constructor(name, hp) {
+  constructor(name, hp, atk) {
     this.name = name;
     this.hp = hp;
+    this.atk = atk;
+  }
+
+  attackRoll() {
+    let attack = 0;
+    return attack;    
   }
 }
