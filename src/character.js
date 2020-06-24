@@ -19,8 +19,19 @@ export class Character {
 
   attackMonster(monster) {
     monster.hp = monster.hp - this.attackRoll();
-    return monster.hp;
+        
+    if (monster.hp <= 0) {
+      // this.xp += monster.xpAwarded;
+      return this;
+    }
+    else{
+      return monster;
+    }
   }
+
+  // gainXp(monster) {
+    // this.xp += monster.xpAwarded;
+  // }
 }
 
 export class Monster {
@@ -37,6 +48,6 @@ export class Monster {
 
   attackCharacter(character) {
     character.hp = character.hp - this.attackRoll();
-    return character.hp;
+    return character;
   }
 }
