@@ -12,7 +12,7 @@ export class Character {
   }
 
   attackRoll() {
-    let attack = 0;
+    let attack = this.attributes.str / 2;
     return attack;    
   }
 }
