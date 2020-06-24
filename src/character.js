@@ -34,6 +34,6 @@ export class Monster {
   }
 
   attackCharacter(character) {
-    return 0;
+    return character.hp - this.attackRoll();
   }
 }
