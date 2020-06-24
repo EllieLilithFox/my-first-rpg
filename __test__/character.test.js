@@ -1,10 +1,9 @@
 import { Character } from "./../src/character.js";
-import { TestScheduler } from "jest";
 
 describe("Character", () => {
   let reusableCharacter;
   beforeEach(() => {
-    reusableCharacter = new Character();
+    reusableCharacter = new Character("The Dude", 10);
   });
 
 
