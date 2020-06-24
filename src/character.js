@@ -11,3 +11,10 @@ export class Character {
     };
   }
 }
+
+export class Monster {
+  constructor(name, hp) {
+    this.name = name;
+    this.hp = hp;
+  }
+}git
