@@ -17,4 +17,4 @@ export class Monster {
     this.name = name;
     this.hp = hp;
   }
-}git
+}
