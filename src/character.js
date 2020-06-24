@@ -27,6 +27,7 @@ export class Monster {
   constructor(name, hp, atk) {
     this.name = name;
     this.hp = hp;
+    this.xpAwarded = "";
     this.atk = atk;
   }
 

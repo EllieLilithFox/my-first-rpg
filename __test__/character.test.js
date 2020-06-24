@@ -18,10 +18,11 @@ describe("Character", () => {
     expect(reusableCharacter.xp).toBe(0);
   });
 
-  test("Should correctly create a monster object with name, hp, and attack strength", () => {
+  test("Should correctly create a monster object with name, hp, xp awarded and attack strength", () => {
     expect(reusableMonster.name).toBe("Goblin");
     expect(reusableMonster.hp).toBe(4);
     expect(reusableMonster.atk).toBe(4);
+    expect(reusableMonster.xpAwarded).toBe(2);
   });
 
   test("Should correctly run a method to calculate an attack roll by the character object", () => {
