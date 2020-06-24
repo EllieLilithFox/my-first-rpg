@@ -4,6 +4,10 @@ export class Character {
     this.hp = hp;
     this.level = 1;
     this.xp = 0;
+    this.inventory = {
+      weapon: 0,
+      armor: 0
+    }
     this.attributes = {
       str: 10,
       dex: 10,

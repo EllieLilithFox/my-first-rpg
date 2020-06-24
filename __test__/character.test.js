@@ -13,11 +13,12 @@ describe("Character", () => {
 
 
 
-  test("Should correctly create a character object with name, hp, level, xp and attributes", () => {
+  test("Should correctly create a character object with name, hp, level, xp, inventory and attributes", () => {
     expect(reusableCharacter.name).toBe("The Dude");
     expect(reusableCharacter.hp).toBe(10);
-    expect(reusableCharacter.xp).toBe(0);
     expect(reusableCharacter.level).toBe(1);
+    expect(reusableCharacter.xp).toBe(0);
+    expect(reusableCharacter.inventory).toEqual({ weapon: "", armor: "" });
     expect(reusableCharacter.attributes).toEqual({str: 10, dex: 10, con: 10, int: 10, cha: 10});
   });
 
@@ -51,7 +52,6 @@ describe("Character", () => {
   test("Should level up the character from level 1 to level 2 after slaying reusableGoblin", () => {
     reusableCharacter.xp = 98;
     expect(reusableCharacter.attackMonster(reusableGoblin).level).toEqual(2);
-    console.log(reusableCharacter.xp);
   });
 
 });

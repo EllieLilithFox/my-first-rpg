@@ -30,9 +30,9 @@ A webpage RPG
     * **Input Example:** 0 hp monster after battle
     * **Output Example:** character earns 5xp
 
-6. **Behavior:** 
-    * **Input Example:**
-    * **Output Example:** 
+6. **Behavior:** Program will level up character after xp level reaches level x 10
+    * **Input Example:** xp = 98 + 2
+    * **Output Example:** level = 2
 
 7. **Behavior:** 
     * **Input Example:**
