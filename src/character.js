@@ -2,6 +2,7 @@ export class Character {
   constructor(name, hp) {
     this.name = name;
     this.hp = hp;
+    this.level = "";
     this.xp = 0;
     this.attributes = {
       str: 10,
