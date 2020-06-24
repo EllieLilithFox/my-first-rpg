@@ -5,8 +5,8 @@ export class Character {
     this.level = 1;
     this.xp = 0;
     this.inventory = {
-      weapon: 0,
-      armor: 0
+      weapon: "",
+      armor: ""
     }
     this.attributes = {
       str: 10,
