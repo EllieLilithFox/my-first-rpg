@@ -23,6 +23,9 @@ export class Character {
         
     if (monster.hp <= 0) {
       this.xp += monster.xpAwarded;
+      if (this.xp >= (this.level * 10)) {
+        // this.level++;
+      }
       return this;
     }
     else{

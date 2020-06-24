@@ -3,12 +3,12 @@ import { Monster } from "./../src/character.js";
 
 describe("Character", () => {
   let reusableCharacter;
-  let reusableMonster1;
-  let reusableMonster2;
+  let reusableOgre;
+  let reusableGoblin;
   beforeEach(() => {
     reusableCharacter = new Character("The Dude", 10);
-    reusableMonster1 = new Monster("Ogre", 10, 4, 5);
-    reusableMonster2 = new Monster("Goblin", 4, 2, 4);
+    reusableOgre = new Monster("Ogre", 10, 4, 5);
+    reusableGoblin = new Monster("Goblin", 4, 2, 4);
   });
 
 
@@ -22,10 +22,10 @@ describe("Character", () => {
   });
 
   test("Should correctly create a monster object with name, hp, xp awarded and attack strength", () => {
-    expect(reusableMonster2.name).toBe("Goblin");
-    expect(reusableMonster2.hp).toBe(4);
-    expect(reusableMonster2.atk).toBe(4);
-    expect(reusableMonster2.xpAwarded).toBe(2);
+    expect(reusableGoblin.name).toBe("Goblin");
+    expect(reusableGoblin.hp).toBe(4);
+    expect(reusableGoblin.atk).toBe(4);
+    expect(reusableGoblin.xpAwarded).toBe(2);
   });
 
   test("Should correctly run a method to calculate an attack roll by the character object", () => {
@@ -33,19 +33,25 @@ describe("Character", () => {
   });
 
   test("Should correctly run a method to calculate an attack roll by the monster object", () => {
-    expect(reusableMonster2.attackRoll()).toEqual(4);
+    expect(reusableGoblin.attackRoll()).toEqual(4);
   });
 
   test("Should subtract the value of an object's attack roll from the hp of the target of the attack", () => {
-    expect(reusableCharacter.attackMonster(reusableMonster1).hp).toEqual(5);
+    expect(reusableCharacter.attackMonster(reusableOgre).hp).toEqual(5);
   });
 
   test("Should subtract the value of the monster object's attack roll from the hp of the target of the attack", () => {
-    expect(reusableMonster2.attackCharacter(reusableCharacter).hp).toEqual(6);
+    expect(reusableGoblin.attackCharacter(reusableCharacter).hp).toEqual(6);
   });
 
   test("Should award the character object with xp when the monster object's hp is reduced to 0 or below as a result of the attackMonster() method", () => {
-    expect(reusableCharacter.attackMonster(reusableMonster2).xp).toEqual(2);
+    expect(reusableCharacter.attackMonster(reusableGoblin).xp).toEqual(2);
+  });
+
+  test("Should level up the character from level 1 to level 2 after slaying reusableGoblin", () => {
+    reusableCharacter.xp = 98;
+    expect(reusableCharacter.attackMonster(reusableGoblin).level).toEqual(2);
+    console.log(reusableCharacter.xp);
   });
 
 });
