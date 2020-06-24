@@ -34,4 +34,8 @@ describe("Character", () => {
   test("Should subtract the value of an object's attack roll from the hp of the target of the attack", () => {
     expect(reusableCharacter.attackMonster(reusableMonster)).toEqual(-1);
   });
+
+  test("Should subtract the value of the monster object's attack roll from the hp of the target of the attack", () => {
+    expect(reusableMonster.attackCharacter(reusableCharacter)).toEqual(6);
+  });
 });

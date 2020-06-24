@@ -32,4 +32,8 @@ export class Monster {
   attackRoll() {
     return this.atk;
   }
+
+  attackCharacter(character) {
+    return 0;
+  }
 }
