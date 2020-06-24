@@ -15,6 +15,11 @@ export class Character {
     let attack = this.attributes.str / 2;
     return attack;    
   }
+
+  attackMonster(monster) {
+    monster.hp = monster.hp - this.attackRoll();
+    return monster.hp;
+  }
 }
 
 export class Monster {
