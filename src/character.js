@@ -10,6 +10,11 @@ export class Character {
       cha: 10
     };
   }
+
+  attackRoll() {
+    let attack = 0;
+    return attack;    
+  }
 }
 
 export class Monster {

@@ -20,5 +20,9 @@ describe("Character", () => {
   test("Should correctly create a monster object with name, hp, and attack strength", () => {
     expect(reusableMonster.name).toBe("Goblin");
     expect(reusableMonster.hp).toBe(4);
-  })
+  });
+
+  test("Should correctly run a method to calculate an attack roll by the character object", () => {
+    expect(reusableCharacter.attackRoll()).toEqual(5);
+  });
 });
